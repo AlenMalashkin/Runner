@@ -17,21 +17,21 @@ public class LosePanel : MonoBehaviour
         {
             recordScore = lastScore;
             PlayerPrefs.SetInt("recordScore", recordScore);
-            recordText.text = recordScore.ToString();
+            recordText.text = "Рекорд: " + recordScore.ToString();
         } 
         else
         {
-            recordText.text = recordScore.ToString();
+            recordText.text = "Рекорд: " + recordScore.ToString();
         }
     }
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

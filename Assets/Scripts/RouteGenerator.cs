@@ -7,7 +7,7 @@ public class RouteGenerator : MonoBehaviour
     public GameObject[] routePrefabs;
     private List<GameObject> activeRoutes = new List<GameObject>();
     public float spawnPos = 0;
-    public float routeLength = 100;
+    public float routeLength = 39;
 
     [SerializeField] private Transform player;
     private int startRoutes = 5;
@@ -26,7 +26,7 @@ public class RouteGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.z - 70 > spawnPos - (startRoutes * routeLength))
+        if (player.position.z - 10 > spawnPos - (startRoutes * routeLength))
         {
             SpawnRoute(Random.Range(0, routePrefabs.Length));
             DeleteRoute();
